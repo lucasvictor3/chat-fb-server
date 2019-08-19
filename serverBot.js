@@ -1,10 +1,13 @@
 const express        = require('express');
 const bodyParser     = require('body-parser');
 const app            = express();
+const cors = require('cors');
 
 const News = require('./models/news');
 
 const port = 8000;
+
+
 
 async function getNewsFromDb(escolha ) {
 	var news = [];
@@ -46,7 +49,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
-
+app.use(cors());
 
 require('./controller/appController')(app);
 
