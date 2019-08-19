@@ -54,7 +54,7 @@ app.use(bodyParser.json());
 
 require('./controller/appController')(app);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
 	
 	  console.log('We are live on ' + port);
 });
