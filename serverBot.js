@@ -103,11 +103,12 @@ app.post("/testando", async (req, res, next) => {
       "payload": {	
         "template_type":"generic",	
         "elements": escolha	
-      }	
-
-
-     }
-  
+			}	
+			}
+		}
+	}
+	
+	
     return res.json(
     {
     payload: speechResponse,
