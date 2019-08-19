@@ -4,7 +4,7 @@
     "npm": "2.5.x"
   },
 	"scripts": {
-  "start": "node index.js",
+  "start": "node serverBot.js",
   "build": "webpack"
 },
   "dependencies": {
