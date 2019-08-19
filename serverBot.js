@@ -95,11 +95,22 @@ app.post("/testando", async (req, res, next) => {
 			})
     }  
   
+    var speechResponse = 	
+        {	
+  "facebook": {	
+    "attachment": {	
+      "type": "template",	
+      "payload": {	
+        "template_type":"generic",	
+        "elements": escolha	
+      }	
 
+
+     }
   
     return res.json(
     {
-    payload: escolha,
+    payload: speechResponse,
     fulfillmentText: speech,
     speech: speech,
     displayText: speech,
