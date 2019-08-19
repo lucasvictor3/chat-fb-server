@@ -3,7 +3,7 @@
     "node": "10.8.0"
   },
   "scripts": {
-    "start": "node serverBot.js && service mongod start "
+    "start": "node serverBot.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
