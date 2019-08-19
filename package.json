@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "12.8.1",
+    "node": "10.8.0",
     "npm": "2.5.x"
   },
   "scripts": {
