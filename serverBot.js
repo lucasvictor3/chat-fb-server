@@ -99,7 +99,7 @@ app.post("/testando", async (req, res, next) => {
   
     return res.json(
     {
-    payload: speechResponse,
+    payload: escolha,
     fulfillmentText: speech,
     speech: speech,
     displayText: speech,
