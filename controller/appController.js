@@ -75,6 +75,7 @@ router.get('/', async (req, res) => {
 		
 		const allNews = await getCollectionFromDb(res);
 		await console.log(allNews)
+		res.setHeader("Access-Control-Allow-Origin", "*");
 		return res.send(allNews);
 	} catch( err) {
 		
