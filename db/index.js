@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 
 
-const uri = "mongodb+srv://lucasvictor3:qK6Z5LPqyznE31RK@cluster0-uxydw.mongodb.net/test?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI;
 mongoose.connect( uri , {useNewUrlParser: true});
 mongoose.Promise = global.Promise;
 
