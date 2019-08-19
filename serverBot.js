@@ -5,10 +5,6 @@ const app            = express();
 const News = require('./models/news');
 
 const port = 8000;
-var politica = [];
-var famosos = [];
-var entreternimento = [];
-var esportes = [];
 
 async function getNewsFromDb(escolha ) {
 	var news = [];
@@ -64,9 +60,6 @@ app.get("/", (req, res, next) => {
 	res.sendStatus(200);
 })
 
-
-
-
 app.get("/webhook", (req, res, next) => {
 if(req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === 'minhasenha123') {
 	console.log('validacao ok');
@@ -78,9 +71,6 @@ if(req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === 'm
 }
 
 });
-
-
-
 
 app.post("/testando", async (req, res, next) => {
   
@@ -101,19 +91,6 @@ app.post("/testando", async (req, res, next) => {
 		source: "webhook-echo-sample"
 			})
     }  
-  
-    var speechResponse = 
-        {
-  "facebook": {
-    "attachment": {
-      "type": "template",
-      "payload": {
-        "template_type":"generic",
-        "elements": escolha
-      }
-      
-      
-    }
   }
 }
   
