@@ -59,7 +59,7 @@ router.get('/getID/:id', async (req, res) => {
 		if(element !== {}) {
 		return res.send(element);
 			}
-	
+		res.setHeader("Access-Control-Allow-Origin", "*");
 		return res.status(404).send({error: 'not found on database'})
 		
 		} catch (err) {
@@ -110,6 +110,7 @@ router.post('/update', async (req, res) => {
 		})
 	
 	const news = await News.create(req.body);
+	res.setHeader("Access-Control-Allow-Origin", "*");
 	return res.send({ news })
 	
 	} catch (err) {
@@ -130,6 +131,7 @@ router.delete('/delete-news/:id', async (req, res) => {
 			}
 			
 		})
+		res.setHeader("Access-Control-Allow-Origin", "*");
 	res.send(200);
 	
 	} catch (err) {
