@@ -87,7 +87,7 @@ router.get('/', async (req, res) => {
 
 router.post('/register', async (req, res) => {
 	try {
-		console.log(req.body)
+		console.log(req.body.body)
 		const news = await News.create(req.body);
 
 		return res.send({ news })
